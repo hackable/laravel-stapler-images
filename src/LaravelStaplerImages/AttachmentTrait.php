@@ -58,10 +58,13 @@ trait AttachmentTrait
         default:
           throw new \Exception("Unrecognized attachment type {$field_type}");
       }
+      
+      /*
       if($la_mode)
       {
         copy($i->path('admin'), $value);
       }
+      */
       return parent::setAttribute($field_name, $i->id);
     }
     return parent::setAttribute($key, $value);
